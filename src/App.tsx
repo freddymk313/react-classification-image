@@ -165,11 +165,12 @@ const App: React.FC = () => {
 
             <p className="text-center text-gray-50 mt-1">
               Prediction probability:{" "}
-              {predictionPercentage !== null && (
+              {/* {predictionPercentage !== null && (
                 <span className="text-green-500">
                   {parseFloat(predictionPercentage).toFixed(2)}%
                 </span>
-              )}
+              )} */}
+              <span className="text-green-500">{predictionPercentage}%</span>
             </p>
           </div>
         )}

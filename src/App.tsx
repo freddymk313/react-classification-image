@@ -15,7 +15,7 @@ const App: React.FC = () => {
   >(null);
 
   useEffect(() => {
-    // loadModel();
+    loadModel();
   }, []);
 
   const loadModel = async () => {
@@ -165,9 +165,11 @@ const App: React.FC = () => {
 
             <p className="text-center text-gray-50 mt-1">
               Prediction probability:{" "}
-              <span className="text-green-500">
-                {parseFloat(predictionPercentage).toFixed(2)}%
-              </span>
+              {predictionPercentage !== null && (
+                <span className="text-green-500">
+                  {parseFloat(predictionPercentage).toFixed(2)}%
+                </span>
+              )}
             </p>
           </div>
         )}
